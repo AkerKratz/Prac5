@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const constants = [
+      { text: "Значення константи е", num: Math.E },
+      { text: "Значення константи π", num: Math.PI },
+      {
+        text: "Десятковий логарифм постійної Ейлера (е)",
+        num: Math.log10(Math.E),
+      },
+      {
+        text: "Двійковий логарифм постійної Ейлера (е)",
+        num: Math.log2(Math.E),
+      },
+      { text: "Натуральний логарифм числа 10", num: Math.log(10) },
+      { text: "Натуральний логарифм числа 2", num: Math.log(2) },
+      { text: "Корінь квадратний із двох ", num: Math.sqrt(2) },
+      { text: "Корінь квадратний з однієї другої", num: Math.sqrt(1 / 2) },
+    ];
+    const funcs = [
+      {
+        text: "Натуральний логарифм від e^2",
+        num: Math.log(Math.pow(Math.exp(),2)),
+      },
+      {
+        text: "Результат обчислення десяткового логарифма від числа 100",
+        num: Math.log10(100),
+      },
+      {
+        text: "Результат обчислення двійкового логарифма від числа 8",
+        num: Math.log2(8),
+      },
+      {
+        text: "Тангенс 45 градусів (з округленням)",
+        num: Math.tan(45),
+      },
+      {
+        text: "Результат округлення числа 1,00123 у більшу сторону",
+        num: Math.ceil(1.00123),
+      },
+    ];
+    const ul = document.createElement("ul");
+    const ul2 = document.createElement("ul");
+
+    constants.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text} = ${el.num}`;
+      ul.appendChild(li);
+    });
+    document.body.appendChild(ul);
+
+    funcs.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text}: y = ${el.num}`;
+      ul2.appendChild(li);
+    });
+    document.body.appendChild(ul2);
+    const newSpan = document.createElement("span");
+    newSpan.textContent = Math.random();
+    document.body.appendChild(newSpan);
+  </script>
+</html>

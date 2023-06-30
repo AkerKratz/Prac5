@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+
+  <body>
+    <button>Т.Шевченко</button>
+    <button>П. Чубинський</button>
+    <button>Л. Толстой</button>
+    <button>В. Голобородько</button>
+    <button>М. Гоголь</button>
+    <script>
+      const quotes = [
+        "Нема на світі України, немає другого Дніпра",
+        `Ще не вмерла України і слава, і воля.`,
+        "Я дуже люблю народну українсь-ку мову, звучну, барвисту й таку м'я-ку.",
+         "Мова вмирає, коли наступне покоління втрачає розуміння значення слів",
+        "М. Гоголь Дивуєшся дорогоцінності мови нашої: в ній що не звук, то подарунок, все крупно, зернисто, як самі перла",
+      ];
+      document.querySelectorAll("button").forEach((el, i) => {
+        el.onclick = () => alert(quotes[i]);
+      });
+    </script>
+  </body>
+</html>
